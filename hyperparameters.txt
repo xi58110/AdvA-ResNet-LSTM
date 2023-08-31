@@ -1,0 +1,29 @@
+On the ACL18 dataset:
+
+LSTM:
+    python adva_resnet_lstm.py -a 0 -l 10 -u 32 -l2 10 -f 1
+ALSTM:
+    python adva_resnet_lstm.py -l 5 -u 4 -l2 1 -f 1
+Adv-ALSTM:
+    python adva_resnet_lstm.py -l 5 -u 4 -l2 1 -v 1 -la 0.01 -le 0.05
+ResNet-LSTM:
+    python adva_resnet_lstm.py -l 5 -u 4 -l2 1 -a 0 -rl 0 -f 1 -rn 1 
+ResNet34-LSTM:
+    python adva_resnet_lstm34.py -l 5 -u 4 -l2 1 -v 1 -f 1 -rl 0 -g 1 -rn 1 
+AdvA-ResNet-LSTM:
+    python adva_resnet_lstm.py -l 5 -u 4 -l2 1 -v 1 -f 1 -rl 1 -g 1 -rn 1 -q ./saved_model/acl18_adva_resnet_lstm/exp
+
+On the KDD17 dataset:
+
+LSTM:
+    python adva_resnet_lstm.py -p ./data/kdd17/ourpped/ -l 5 -u 4 -l2 0.001 -a 0 -f 1
+ALSTM:
+    python adva_resnet_lstm.py -p ./data/kdd17/ourpped/ -l 5 -u 4 -l2 0.001 -f 1
+Adv-ALSTM:
+    python adva_resnet_lstm.py -p ./data/kdd17/ourpped/ -l 5 -u 4 -l2 0.001 -v 1 -rl 0 -la 0.05 -le 0.001 -f 1
+ResNet-LSTM:
+    python adva_resnet_lstm.py -p ./data/kdd17/ourpped/ -l 5 -u 4 -l2 0.001 -a 0 -rl 0 -f 1 -rn 1 -g 1
+ResNet34-LSTM:
+    python adva_resnet_lstm34.py -p ./data/kdd17/ourpped/ -l 5 -u 4 -l2 0.001 -a 0 -r0 1  -la 0.1 -le 0.001 -rn 1 -g 1 
+AdvA-ResNet-LSTM:
+    python adva_resnet_lstm.py -p ./data/kdd17/ourpped/ -l 5 -u 4 -l2 0.001 -v 1 -rl 1 -la 0.05 -le 0.001 -rn 1 -g 1 -q ./saved_model/kdd_adva_resnet_lstm/exp
