@@ -16,3 +16,5 @@ saved_model contains the model we have already trained.
 Run the 'graph.ipynb', you can get the graphs we used in the paper, other graphs we used in graph file.
 
 resnet1.py, residual_clock1.py, load.py, evaluator.py are all files that used in adva_resnet_lstm.py and adva_resnet_lstm34.py
+
+Please go to blackboard to get the data source.
